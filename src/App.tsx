@@ -4,6 +4,18 @@ import { Menu, X, Instagram, Facebook, Mail, MapPin, Phone, ChevronDown } from '
 import './App.css'
 import heroImg from './assets/hero-tmid.jpg'
 import mainImg from './assets/main-tmid.jpg'
+import tmid1 from './assets/tmid-1.jpg'
+import tmid2 from './assets/tmid-2.jpg'
+import tmid3 from './assets/tmid-3.jpg'
+import tmid4 from './assets/tmid-4.jpg'
+import tmid5 from './assets/tmid-5.jpg'
+import tmid6 from './assets/tmid-6.jpg'
+import tmid7 from './assets/tmid-7.jpg'
+import tmid8 from './assets/tmid-8.jpg'
+import tmid9 from './assets/tmid-9.jpg'
+import tmid10 from './assets/tmid-10.jpg'
+import tmid11 from './assets/tmid-11.jpg'
+import tmid12 from './assets/tmid-12.jpg'
 
 const DEEP_RED = '#8B0000'
 
@@ -235,11 +247,10 @@ function HomePage() {
 
 /* ─── Gallery Page ─── */
 function GalleryPage() {
-  const placeholders = Array.from({ length: 12 }, (_, i) => ({
-    id: i + 1,
-    src: `https://placehold.co/${i % 2 === 0 ? '600x600' : '600x400'}/111111/8B0000/png?text=PHOTO+${i + 1}`,
-    alt: `Gallery photo ${i + 1} placeholder`,
-  }))
+  const photos = [
+    tmid1, tmid2, tmid4, tmid5, tmid6, tmid3,
+    tmid7, tmid8, tmid9, tmid10, tmid11, tmid12,
+  ].map((src, i) => ({ id: i + 1, src, alt: `The Man Is Dead photo ${i + 1}` }))
 
   return (
     <div className="min-h-screen pt-24 pb-20 px-4">
@@ -253,7 +264,7 @@ function GalleryPage() {
 
         {/* Masonry-style grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-          {placeholders.map((photo) => (
+          {photos.map((photo) => (
             <div
               key={photo.id}
               className="break-inside-avoid group relative overflow-hidden border border-white/10 hover:border-red-800/50 transition-all duration-300"
