@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { Menu, X, Instagram, Facebook, Mail, MapPin, Phone, ChevronDown } from 'lucide-react'
 import './App.css'
+import heroImg from './assets/hero-tmid.jpg'
+import mainImg from './assets/main-tmid.jpg'
 
 const DEEP_RED = '#8B0000'
 
@@ -110,9 +112,15 @@ function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center min-h-screen px-4 text-center">
+        <img
+          src={heroImg}
+          alt="The Man Is Dead"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60" />
         <h1
-          className="text-6xl sm:text-8xl md:text-9xl font-black text-white uppercase leading-none tracking-tighter"
-          style={{ textShadow: `0 0 40px ${DEEP_RED}40` }}
+          className="relative z-10 text-6xl sm:text-8xl md:text-9xl font-black text-white uppercase leading-none tracking-tighter"
+          style={{ textShadow: `0 0 40px ${DEEP_RED}40, 0 0 80px rgba(0,0,0,0.8)` }}
         >
           The Man
           <br />
@@ -120,7 +128,7 @@ function HomePage() {
         </h1>
         <button
           onClick={() => document.getElementById('featured')?.scrollIntoView({ behavior: 'smooth' })}
-          className="mt-12 text-white/40 hover:text-red-700 transition-colors animate-bounce cursor-pointer"
+          className="relative z-10 mt-12 text-white/40 hover:text-red-700 transition-colors animate-bounce cursor-pointer"
           aria-label="Scroll down"
         >
           <ChevronDown size={32} />
@@ -189,8 +197,8 @@ function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="relative aspect-video max-w-4xl mx-auto overflow-hidden border border-white/10">
             <img
-              src="https://placehold.co/1200x600/111111/8B0000/png?text=BAND+PHOTO"
-              alt="Band photo placeholder"
+              src={mainImg}
+              alt="The Man Is Dead"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
