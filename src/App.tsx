@@ -21,8 +21,8 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo / Band Name */}
-          <Link to="/" className="text-white font-black text-lg tracking-widest uppercase hover:text-red-700 transition-colors">
-            TMID
+          <Link to="/" className="text-white font-black text-lg tracking-widest hover:text-red-700 transition-colors">
+            TMiD
           </Link>
 
           {/* Desktop Nav */}
@@ -42,18 +42,18 @@ function Navbar() {
 
           {/* Social Icons (Desktop) */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="Instagram">
+            <a target='_blank' href="https://www.instagram.com/p/DKIxSVuJH7j/" className="text-white hover:text-red-700 transition-colors" aria-label="Instagram">
               <Instagram size={18} />
             </a>
-            <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="Facebook">
+            <a target='_blank' href="https://www.facebook.com/people/The-Man-is-Dead/61584141614938/#" className="text-white hover:text-red-700 transition-colors" aria-label="Facebook">
               <Facebook size={18} />
             </a>
-            <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="YouTube">
+            {/* <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="YouTube">
               <Youtube size={18} />
-            </a>
-            <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="Music">
+            </a> */}
+            {/* <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="Music">
               <Music size={18} />
-            </a>
+            </a> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,59 +84,23 @@ function Navbar() {
               </Link>
             ))}
             <div className="flex gap-4 pt-2 border-t border-white/10">
-              <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="Instagram">
+              <a target='_blank' href="https://www.instagram.com/p/DKIxSVuJH7j/" className="text-white hover:text-red-700 transition-colors" aria-label="Instagram">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="Facebook">
+              <a target='_blank' href="https://www.facebook.com/people/The-Man-is-Dead/61584141614938/#" className="text-white hover:text-red-700 transition-colors" aria-label="Facebook">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="YouTube">
+              {/* <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="YouTube">
                 <Youtube size={18} />
-              </a>
-              <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="Music">
+              </a> */}
+              {/* <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="Music">
                 <Music size={18} />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
       )}
     </nav>
-  )
-}
-
-/* ─── Starfield Background ─── */
-function StarfieldBg() {
-  return (
-    <div className="fixed inset-0 -z-10 bg-black overflow-hidden">
-      {/* Stars using CSS radial gradients */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `
-            radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.8) 0%, transparent 100%),
-            radial-gradient(1px 1px at 25% 45%, rgba(255,255,255,0.6) 0%, transparent 100%),
-            radial-gradient(1px 1px at 40% 15%, rgba(255,255,255,0.7) 0%, transparent 100%),
-            radial-gradient(1.5px 1.5px at 55% 70%, rgba(255,255,255,0.9) 0%, transparent 100%),
-            radial-gradient(1px 1px at 70% 30%, rgba(255,255,255,0.5) 0%, transparent 100%),
-            radial-gradient(1px 1px at 85% 55%, rgba(255,255,255,0.7) 0%, transparent 100%),
-            radial-gradient(1.5px 1.5px at 15% 80%, rgba(255,255,255,0.6) 0%, transparent 100%),
-            radial-gradient(1px 1px at 30% 65%, rgba(255,255,255,0.8) 0%, transparent 100%),
-            radial-gradient(1px 1px at 60% 90%, rgba(255,255,255,0.5) 0%, transparent 100%),
-            radial-gradient(1px 1px at 90% 85%, rgba(255,255,255,0.7) 0%, transparent 100%),
-            radial-gradient(1px 1px at 5% 50%, rgba(255,255,255,0.6) 0%, transparent 100%),
-            radial-gradient(1.5px 1.5px at 48% 38%, rgba(255,255,255,0.8) 0%, transparent 100%),
-            radial-gradient(1px 1px at 78% 60%, rgba(255,255,255,0.5) 0%, transparent 100%),
-            radial-gradient(1px 1px at 35% 92%, rgba(255,255,255,0.7) 0%, transparent 100%),
-            radial-gradient(1px 1px at 62% 12%, rgba(255,255,255,0.6) 0%, transparent 100%),
-            radial-gradient(1.5px 1.5px at 92% 42%, rgba(255,255,255,0.9) 0%, transparent 100%),
-            radial-gradient(1px 1px at 18% 35%, rgba(255,255,255,0.4) 0%, transparent 100%),
-            radial-gradient(1px 1px at 52% 52%, rgba(255,255,255,0.6) 0%, transparent 100%),
-            radial-gradient(1px 1px at 73% 78%, rgba(255,255,255,0.7) 0%, transparent 100%),
-            radial-gradient(1px 1px at 8% 95%, rgba(255,255,255,0.5) 0%, transparent 100%)
-          `,
-        }}
-      />
-    </div>
   )
 }
 
@@ -154,16 +118,13 @@ function HomePage() {
           <br />
           <span className="text-red-800">Is Dead</span>
         </h1>
-        <p className="mt-6 text-white/60 text-lg sm:text-xl tracking-widest uppercase">
-          No Mercy. No Masters. Just Noise.
-        </p>
-        <a
-          href="#featured"
-          className="mt-12 text-white/40 hover:text-red-700 transition-colors animate-bounce"
+        <button
+          onClick={() => document.getElementById('featured')?.scrollIntoView({ behavior: 'smooth' })}
+          className="mt-12 text-white/40 hover:text-red-700 transition-colors animate-bounce cursor-pointer"
           aria-label="Scroll down"
         >
           <ChevronDown size={32} />
-        </a>
+        </button>
       </section>
 
       {/* Featured Section */}
@@ -175,17 +136,17 @@ function HomePage() {
 
           {/* Featured cards grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Card 1 - New Album */}
+            {/* Card 1 - New Single */}
             <div className="group relative overflow-hidden bg-white/5 border border-white/10 hover:border-red-800/50 transition-all duration-300">
               <div className="aspect-square bg-gradient-to-br from-red-900/30 to-black flex items-center justify-center">
                 <img
-                  src="https://placehold.co/600x600/111111/8B0000/png?text=NEW+ALBUM"
-                  alt="New album artwork placeholder"
+                  src="https://placehold.co/600x600/111111/8B0000/png?text=NEW+SINGLE"
+                  alt="New single artwork placeholder"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-white font-bold text-lg uppercase tracking-wider">New Album</h3>
+                <h3 className="text-white font-bold text-lg uppercase tracking-wider">New Single</h3>
                 <p className="text-white/50 text-sm mt-2">Coming Soon</p>
               </div>
             </div>
@@ -194,14 +155,14 @@ function HomePage() {
             <div className="group relative overflow-hidden bg-white/5 border border-white/10 hover:border-red-800/50 transition-all duration-300">
               <div className="aspect-square bg-gradient-to-br from-red-900/30 to-black flex items-center justify-center">
                 <img
-                  src="https://placehold.co/600x600/111111/8B0000/png?text=ON+TOUR"
+                  src="https://placehold.co/600x600/111111/8B0000/png?text=SHOWS"
                   alt="Tour dates placeholder"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-white font-bold text-lg uppercase tracking-wider">Tour Dates</h3>
-                <p className="text-white/50 text-sm mt-2">Check back for upcoming shows</p>
+                <h3 className="text-white font-bold text-lg uppercase tracking-wider">Upcoming Shows</h3>
+                <p className="text-white/50 text-sm mt-2">Coming Soon</p>
               </div>
             </div>
 
@@ -216,7 +177,7 @@ function HomePage() {
               </div>
               <div className="p-6">
                 <h3 className="text-white font-bold text-lg uppercase tracking-wider">Merch</h3>
-                <p className="text-white/50 text-sm mt-2">Gear up</p>
+                <p className="text-white/50 text-sm mt-2">Coming Soon</p>
               </div>
             </div>
           </div>
@@ -226,9 +187,6 @@ function HomePage() {
       {/* Band Photo Section - Placeholder */}
       <section className="py-20 px-4 border-t border-white/10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-black text-white uppercase tracking-widest text-center mb-16">
-            <span className="border-b-2 border-red-800 pb-2">The Band</span>
-          </h2>
           <div className="relative aspect-video max-w-4xl mx-auto overflow-hidden border border-white/10">
             <img
               src="https://placehold.co/1200x600/111111/8B0000/png?text=BAND+PHOTO"
@@ -243,7 +201,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Newsletter / CTA */}
+      {/* Newsletter / CTA
       <section className="py-20 px-4 border-t border-white/10">
         <div className="max-w-xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-widest mb-4">Stay Connected</h2>
@@ -262,7 +220,7 @@ function HomePage() {
             </button>
           </form>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
@@ -402,23 +360,11 @@ function ContactPage() {
 
             <div>
               <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-red-800 pb-2 inline-block">
-                Management
-              </h3>
-              <div className="flex flex-col gap-3">
-                <a href="mailto:mgmt@themanisdead.com" className="flex items-center gap-3 text-white/60 hover:text-red-700 transition-colors">
-                  <Mail size={16} />
-                  <span className="text-sm">mgmt@themanisdead.com</span>
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-red-800 pb-2 inline-block">
                 Location
               </h3>
               <div className="flex items-center gap-3 text-white/60">
                 <MapPin size={16} />
-                <span className="text-sm">Portland, OR</span>
+                <span className="text-sm">Denver, CO</span>
               </div>
             </div>
 
@@ -433,12 +379,12 @@ function ContactPage() {
                 <a href="#" className="text-white/60 hover:text-red-700 transition-colors" aria-label="Facebook">
                   <Facebook size={20} />
                 </a>
-                <a href="#" className="text-white/60 hover:text-red-700 transition-colors" aria-label="YouTube">
+                {/* <a href="#" className="text-white/60 hover:text-red-700 transition-colors" aria-label="YouTube">
                   <Youtube size={20} />
-                </a>
-                <a href="#" className="text-white/60 hover:text-red-700 transition-colors" aria-label="Music">
+                </a> */}
+                {/* <a href="#" className="text-white/60 hover:text-red-700 transition-colors" aria-label="Music">
                   <Music size={20} />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -451,20 +397,14 @@ function ContactPage() {
 /* ─── Footer ─── */
 function Footer() {
   return (
-    <footer className="border-t border-white/10 py-8 px-4">
+    <footer className="border-t border-white/10 py-8 px-4 bg-black">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-white/30 text-xs uppercase tracking-widest">
           &copy; {new Date().getFullYear()} The Man Is Dead. All Rights Reserved.
         </p>
         <div className="flex gap-4">
-          <a href="#" className="text-white/30 hover:text-red-700 transition-colors" aria-label="Instagram">
-            <Instagram size={16} />
-          </a>
-          <a href="#" className="text-white/30 hover:text-red-700 transition-colors" aria-label="Facebook">
-            <Facebook size={16} />
-          </a>
-          <a href="#" className="text-white/30 hover:text-red-700 transition-colors" aria-label="YouTube">
-            <Youtube size={16} />
+          <a target='_blank' href="https://www.sunnybrown.dev/" className="text-white/30 hover:text-red-700 transition-colors" aria-label="SWDLink">
+            Built by Sunshine Web Development
           </a>
         </div>
       </div>
@@ -476,9 +416,8 @@ function Footer() {
 function App() {
   return (
     <Router>
-      <StarfieldBg />
       <Navbar />
-      <main>
+      <main className='bg-black'>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
