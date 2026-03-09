@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
-import { Menu, X, Instagram, Facebook, Youtube, Mail, MapPin, Phone, ChevronDown, Music } from 'lucide-react'
+import { Menu, X, Instagram, Facebook, Mail, MapPin, Phone, ChevronDown } from 'lucide-react'
 import './App.css'
 
 const DEEP_RED = '#8B0000'
