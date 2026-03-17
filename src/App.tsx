@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
-import { Menu, X, Instagram, Facebook, Mail, MapPin, Phone, ChevronDown } from 'lucide-react'
+import { Menu, X, Instagram, Facebook, Mail, MapPin, Phone } from 'lucide-react'
 import './App.css'
 import heroImg from './assets/hero-tmid.jpg'
 import logoSmall from './assets/tmid-small-red.png'
