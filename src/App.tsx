@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import { Menu, X, Instagram, Facebook, Mail, MapPin, Phone, ChevronDown } from 'lucide-react'
 import './App.css'
 import heroImg from './assets/hero-tmid.jpg'
+import logoSmall from './assets/tmid-small-red.png'
+import logoLarge from './assets/tmid-large-red.png'
 import mainImg from './assets/main-tmid.jpg'
 import tmid1 from './assets/tmid-1.jpg'
 import tmid2 from './assets/tmid-2.jpg'
@@ -16,8 +18,6 @@ import tmid9 from './assets/tmid-9.jpg'
 import tmid10 from './assets/tmid-10.jpg'
 import tmid11 from './assets/tmid-11.jpg'
 import tmid12 from './assets/tmid-12.jpg'
-
-const DEEP_RED = '#8B0000'
 
 /* ─── Navigation ─── */
 function Navbar() {
@@ -35,8 +35,8 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo / Band Name */}
-          <Link to="/" className="text-white font-black text-lg tracking-widest hover:text-red-700 transition-colors">
-            TMiD
+          <Link to="/">
+            <img src={logoSmall} alt="The Man Is Dead" className="h-10" />
           </Link>
 
           {/* Desktop Nav */}
@@ -62,12 +62,9 @@ function Navbar() {
             <a target='_blank' href="https://www.facebook.com/people/The-Man-is-Dead/61584141614938/#" className="text-white hover:text-red-700 transition-colors" aria-label="Facebook">
               <Facebook size={18} />
             </a>
-            {/* <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="YouTube">
-              <Youtube size={18} />
-            </a> */}
-            {/* <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="Music">
-              <Music size={18} />
-            </a> */}
+            <a target='_blank' href="https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO" className="text-white hover:text-red-700 transition-colors" aria-label="Spotify">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34a.75.75 0 0 1-1.03.248c-2.82-1.723-6.37-2.112-10.552-1.157a.749.749 0 1 1-.334-1.462c4.572-1.045 8.492-.595 11.668 1.338a.75.75 0 0 1 .248 1.034zm1.473-3.272a.936.936 0 0 1-1.287.308c-3.225-1.982-8.142-2.557-11.958-1.399a.937.937 0 0 1-1.167-.623.937.937 0 0 1 .624-1.167c4.358-1.322 9.776-.682 13.48 1.595.44.27.578.846.308 1.286zm.127-3.403C15.688 8.382 9.116 8.172 5.312 9.26a1.122 1.122 0 1 1-.652-2.148c4.373-1.247 11.64-1.006 16.229 1.675a1.122 1.122 0 0 1-1.768 1.378z"/></svg>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -104,12 +101,9 @@ function Navbar() {
               <a target='_blank' href="https://www.facebook.com/people/The-Man-is-Dead/61584141614938/#" className="text-white hover:text-red-700 transition-colors" aria-label="Facebook">
                 <Facebook size={18} />
               </a>
-              {/* <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="YouTube">
-                <Youtube size={18} />
-              </a> */}
-              {/* <a href="#" className="text-white hover:text-red-700 transition-colors" aria-label="Music">
-                <Music size={18} />
-              </a> */}
+              <a target='_blank' href="https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO" className="text-white hover:text-red-700 transition-colors" aria-label="Spotify">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34a.75.75 0 0 1-1.03.248c-2.82-1.723-6.37-2.112-10.552-1.157a.749.749 0 1 1-.334-1.462c4.572-1.045 8.492-.595 11.668 1.338a.75.75 0 0 1 .248 1.034zm1.473-3.272a.936.936 0 0 1-1.287.308c-3.225-1.982-8.142-2.557-11.958-1.399a.937.937 0 0 1-1.167-.623.937.937 0 0 1 .624-1.167c4.358-1.322 9.776-.682 13.48 1.595.44.27.578.846.308 1.286zm.127-3.403C15.688 8.382 9.116 8.172 5.312 9.26a1.122 1.122 0 1 1-.652-2.148c4.373-1.247 11.64-1.006 16.229 1.675a1.122 1.122 0 0 1-1.768 1.378z"/></svg>
+              </a>
             </div>
           </div>
         </div>
@@ -123,28 +117,18 @@ function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center min-h-screen px-4 text-center">
+      <section className="relative flex flex-col items-center justify-center h-[60vh] sm:min-h-screen px-4 text-center">
         <img
           src={heroImg}
           alt="The Man Is Dead"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-black/60" />
-        <h1
-          className="relative z-10 text-6xl sm:text-8xl md:text-9xl font-black text-white uppercase leading-none tracking-tighter"
-          style={{ textShadow: `0 0 40px ${DEEP_RED}40, 0 0 80px rgba(0,0,0,0.8)` }}
-        >
-          The Man
-          <br />
-          <span className="text-red-800">Is Dead</span>
-        </h1>
-        <button
-          onClick={() => document.getElementById('featured')?.scrollIntoView({ behavior: 'smooth' })}
-          className="relative z-10 mt-12 text-white/40 hover:text-red-700 transition-colors animate-bounce cursor-pointer"
-          aria-label="Scroll down"
-        >
-          <ChevronDown size={32} />
-        </button>
+        <img
+          src={logoLarge}
+          alt="The Man Is Dead"
+          className="relative z-10 w-[80vw] max-w-5xl drop-shadow-[0_0_40px_rgba(139,0,0,0.4)]"
+        />
       </section>
 
       {/* Featured Section */}
@@ -157,19 +141,22 @@ function HomePage() {
           {/* Featured cards grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Card 1 - New Single */}
-            <div className="group relative overflow-hidden bg-white/5 border border-white/10 hover:border-red-800/50 transition-all duration-300">
-              <div className="aspect-square bg-gradient-to-br from-red-900/30 to-black flex items-center justify-center">
-                <img
-                  src="https://placehold.co/600x600/111111/8B0000/png?text=NEW+SINGLE"
-                  alt="New single artwork placeholder"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+            <a target='_blank' href='https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO'>
+              <div className="group relative overflow-hidden bg-white/5 border border-white/10 hover:border-red-800/50 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-red-900/30 to-black flex items-center justify-center">
+                  <img
+                    src="https://placehold.co/600x600/111111/8B0000/png?text=NEW+SINGLE"
+                    alt="New single artwork placeholder"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                
+                  <div className="p-6">
+                    <h3 className="text-white font-bold text-lg uppercase tracking-wider">Sunny</h3>
+                    <p className="text-white/50 text-sm mt-2">Check it out on Spotify</p>
+                  </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-white font-bold text-lg uppercase tracking-wider">New Single</h3>
-                <p className="text-white/50 text-sm mt-2">Coming Soon</p>
-              </div>
-            </div>
+            </a>
 
             {/* Card 2 - Tour */}
             <div className="group relative overflow-hidden bg-white/5 border border-white/10 hover:border-red-800/50 transition-all duration-300">
@@ -181,8 +168,8 @@ function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-white font-bold text-lg uppercase tracking-wider">Upcoming Shows</h3>
-                <p className="text-white/50 text-sm mt-2">Coming Soon</p>
+                <h3 className="text-white font-bold text-lg uppercase tracking-wider">Lost Lake</h3>
+                <p className="text-white/50 text-sm mt-2">Come see us on May 9th</p>
               </div>
             </div>
 
@@ -398,12 +385,9 @@ function ContactPage() {
                 <a href="#" className="text-white/60 hover:text-red-700 transition-colors" aria-label="Facebook">
                   <Facebook size={20} />
                 </a>
-                {/* <a href="#" className="text-white/60 hover:text-red-700 transition-colors" aria-label="YouTube">
-                  <Youtube size={20} />
-                </a> */}
-                {/* <a href="#" className="text-white/60 hover:text-red-700 transition-colors" aria-label="Music">
-                  <Music size={20} />
-                </a> */}
+                <a target='_blank' href="https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO" className="text-white/60 hover:text-red-700 transition-colors" aria-label="Spotify">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34a.75.75 0 0 1-1.03.248c-2.82-1.723-6.37-2.112-10.552-1.157a.749.749 0 1 1-.334-1.462c4.572-1.045 8.492-.595 11.668 1.338a.75.75 0 0 1 .248 1.034zm1.473-3.272a.936.936 0 0 1-1.287.308c-3.225-1.982-8.142-2.557-11.958-1.399a.937.937 0 0 1-1.167-.623.937.937 0 0 1 .624-1.167c4.358-1.322 9.776-.682 13.48 1.595.44.27.578.846.308 1.286zm.127-3.403C15.688 8.382 9.116 8.172 5.312 9.26a1.122 1.122 0 1 1-.652-2.148c4.373-1.247 11.64-1.006 16.229 1.675a1.122 1.122 0 0 1-1.768 1.378z"/></svg>
+                </a>
               </div>
             </div>
           </div>
