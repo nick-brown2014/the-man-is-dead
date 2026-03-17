@@ -46,7 +46,7 @@ function Navbar() {
                 key={link.to}
                 to={link.to}
                 className={`text-sm font-bold uppercase tracking-widest transition-colors ${
-                  location.pathname === link.to ? 'text-red-700' : 'text-white hover:text-red-700'
+                  location.pathname === link.to ? 'text-brand' : 'text-white hover:text-brand'
                 }`}
               >
                 {link.label}
@@ -56,20 +56,20 @@ function Navbar() {
 
           {/* Social Icons (Desktop) */}
           <div className="hidden md:flex items-center gap-4">
-            <a target='_blank' href="https://www.instagram.com/p/DKIxSVuJH7j/" className="text-white hover:text-red-700 transition-colors" aria-label="Instagram">
+            <a target='_blank' href="https://www.instagram.com/p/DKIxSVuJH7j/" className="text-white hover:text-brand transition-colors" aria-label="Instagram">
               <Instagram size={18} />
             </a>
-            <a target='_blank' href="https://www.facebook.com/people/The-Man-is-Dead/61584141614938/#" className="text-white hover:text-red-700 transition-colors" aria-label="Facebook">
+            <a target='_blank' href="https://www.facebook.com/people/The-Man-is-Dead/61584141614938/#" className="text-white hover:text-brand transition-colors" aria-label="Facebook">
               <Facebook size={18} />
             </a>
-            <a target='_blank' href="https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO" className="text-white hover:text-red-700 transition-colors" aria-label="Spotify">
+            <a target='_blank' href="https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO" className="text-white hover:text-brand transition-colors" aria-label="Spotify">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34a.75.75 0 0 1-1.03.248c-2.82-1.723-6.37-2.112-10.552-1.157a.749.749 0 1 1-.334-1.462c4.572-1.045 8.492-.595 11.668 1.338a.75.75 0 0 1 .248 1.034zm1.473-3.272a.936.936 0 0 1-1.287.308c-3.225-1.982-8.142-2.557-11.958-1.399a.937.937 0 0 1-1.167-.623.937.937 0 0 1 .624-1.167c4.358-1.322 9.776-.682 13.48 1.595.44.27.578.846.308 1.286zm.127-3.403C15.688 8.382 9.116 8.172 5.312 9.26a1.122 1.122 0 1 1-.652-2.148c4.373-1.247 11.64-1.006 16.229 1.675a1.122 1.122 0 0 1-1.768 1.378z"/></svg>
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white hover:text-red-700 transition-colors"
+            className="md:hidden text-white hover:text-brand transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -88,20 +88,20 @@ function Navbar() {
                 to={link.to}
                 onClick={() => setMobileOpen(false)}
                 className={`text-sm font-bold uppercase tracking-widest transition-colors ${
-                  location.pathname === link.to ? 'text-red-700' : 'text-white hover:text-red-700'
+                  location.pathname === link.to ? 'text-brand' : 'text-white hover:text-brand'
                 }`}
               >
                 {link.label}
               </Link>
             ))}
             <div className="flex gap-4 pt-2 border-t border-white/10">
-              <a target='_blank' href="https://www.instagram.com/p/DKIxSVuJH7j/" className="text-white hover:text-red-700 transition-colors" aria-label="Instagram">
+              <a target='_blank' href="https://www.instagram.com/p/DKIxSVuJH7j/" className="text-white hover:text-brand transition-colors" aria-label="Instagram">
                 <Instagram size={18} />
               </a>
-              <a target='_blank' href="https://www.facebook.com/people/The-Man-is-Dead/61584141614938/#" className="text-white hover:text-red-700 transition-colors" aria-label="Facebook">
+              <a target='_blank' href="https://www.facebook.com/people/The-Man-is-Dead/61584141614938/#" className="text-white hover:text-brand transition-colors" aria-label="Facebook">
                 <Facebook size={18} />
               </a>
-              <a target='_blank' href="https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO" className="text-white hover:text-red-700 transition-colors" aria-label="Spotify">
+              <a target='_blank' href="https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO" className="text-white hover:text-brand transition-colors" aria-label="Spotify">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34a.75.75 0 0 1-1.03.248c-2.82-1.723-6.37-2.112-10.552-1.157a.749.749 0 1 1-.334-1.462c4.572-1.045 8.492-.595 11.668 1.338a.75.75 0 0 1 .248 1.034zm1.473-3.272a.936.936 0 0 1-1.287.308c-3.225-1.982-8.142-2.557-11.958-1.399a.937.937 0 0 1-1.167-.623.937.937 0 0 1 .624-1.167c4.358-1.322 9.776-.682 13.48 1.595.44.27.578.846.308 1.286zm.127-3.403C15.688 8.382 9.116 8.172 5.312 9.26a1.122 1.122 0 1 1-.652-2.148c4.373-1.247 11.64-1.006 16.229 1.675a1.122 1.122 0 0 1-1.768 1.378z"/></svg>
               </a>
             </div>
@@ -127,7 +127,7 @@ function HomePage() {
         <img
           src={logoLarge}
           alt="The Man Is Dead"
-          className="relative z-10 w-[80vw] max-w-5xl drop-shadow-[0_0_40px_rgba(139,0,0,0.4)]"
+          className="relative z-10 w-[80vw] max-w-5xl drop-shadow-[0_0_40px_rgba(242,53,53,0.4)]"
         />
       </section>
 
@@ -135,17 +135,17 @@ function HomePage() {
       <section id="featured" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-black text-white uppercase tracking-widest text-center mb-16">
-            <span className="border-b-2 border-red-800 pb-2">Latest</span>
+            <span className="border-b-2 border-brand pb-2">Latest</span>
           </h2>
 
           {/* Featured cards grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Card 1 - New Single */}
             <a target='_blank' href='https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO'>
-              <div className="group relative overflow-hidden bg-white/5 border border-white/10 hover:border-red-800/50 transition-all duration-300">
-                <div className="aspect-square bg-gradient-to-br from-red-900/30 to-black flex items-center justify-center">
+              <div className="group relative overflow-hidden bg-white/5 border border-white/10 hover:border-brand/50 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-brand/30 to-black flex items-center justify-center">
                   <img
-                    src="https://placehold.co/600x600/111111/8B0000/png?text=NEW+SINGLE"
+                    src="https://placehold.co/600x600/111111/F23535/png?text=NEW+SINGLE"
                     alt="New single artwork placeholder"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -159,10 +159,10 @@ function HomePage() {
             </a>
 
             {/* Card 2 - Tour */}
-            <div className="group relative overflow-hidden bg-white/5 border border-white/10 hover:border-red-800/50 transition-all duration-300">
-              <div className="aspect-square bg-gradient-to-br from-red-900/30 to-black flex items-center justify-center">
+            <div className="group relative overflow-hidden bg-white/5 border border-white/10 hover:border-brand/50 transition-all duration-300">
+              <div className="aspect-square bg-gradient-to-br from-brand/30 to-black flex items-center justify-center">
                 <img
-                  src="https://placehold.co/600x600/111111/8B0000/png?text=SHOWS"
+                  src="https://placehold.co/600x600/111111/F23535/png?text=SHOWS"
                   alt="Tour dates placeholder"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -174,10 +174,10 @@ function HomePage() {
             </div>
 
             {/* Card 3 - Merch */}
-            <div className="group relative overflow-hidden bg-white/5 border border-white/10 hover:border-red-800/50 transition-all duration-300 md:col-span-2 lg:col-span-1">
-              <div className="aspect-square bg-gradient-to-br from-red-900/30 to-black flex items-center justify-center">
+            <div className="group relative overflow-hidden bg-white/5 border border-white/10 hover:border-brand/50 transition-all duration-300 md:col-span-2 lg:col-span-1">
+              <div className="aspect-square bg-gradient-to-br from-brand/30 to-black flex items-center justify-center">
                 <img
-                  src="https://placehold.co/600x600/111111/8B0000/png?text=MERCH"
+                  src="https://placehold.co/600x600/111111/F23535/png?text=MERCH"
                   alt="Merchandise placeholder"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -217,11 +217,11 @@ function HomePage() {
             <input
               type="email"
               placeholder="your@email.com"
-              className="flex-1 px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-red-800 transition-colors"
+              className="flex-1 px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-brand transition-colors"
             />
             <button
               type="submit"
-              className="px-8 py-3 font-bold uppercase tracking-widest text-sm text-white border-2 border-red-800 hover:bg-red-800 transition-colors"
+              className="px-8 py-3 font-bold uppercase tracking-widest text-sm text-white border-2 border-brand hover:bg-brand transition-colors"
             >
               Subscribe
             </button>
@@ -254,14 +254,14 @@ function GalleryPage() {
           {photos.map((photo) => (
             <div
               key={photo.id}
-              className="break-inside-avoid group relative overflow-hidden border border-white/10 hover:border-red-800/50 transition-all duration-300"
+              className="break-inside-avoid group relative overflow-hidden border border-white/10 hover:border-brand/50 transition-all duration-300"
             >
               <img
                 src={photo.src}
                 alt={photo.alt}
                 className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-red-900/0 group-hover:bg-red-900/20 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-brand/0 group-hover:bg-brand/20 transition-colors duration-300" />
             </div>
           ))}
         </div>
@@ -305,7 +305,7 @@ function ContactPage() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-red-800 transition-colors"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-brand transition-colors"
                   placeholder="Your name"
                 />
               </div>
@@ -319,7 +319,7 @@ function ContactPage() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-red-800 transition-colors"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-brand transition-colors"
                   placeholder="your@email.com"
                 />
               </div>
@@ -333,13 +333,13 @@ function ContactPage() {
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-red-800 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-brand transition-colors resize-none"
                   placeholder="Your message..."
                 />
               </div>
               <button
                 type="submit"
-                className="px-8 py-3 font-bold uppercase tracking-widest text-sm text-white border-2 border-red-800 hover:bg-red-800 transition-colors self-start"
+                className="px-8 py-3 font-bold uppercase tracking-widest text-sm text-white border-2 border-brand hover:bg-brand transition-colors self-start"
               >
                 Send Message
               </button>
@@ -349,15 +349,15 @@ function ContactPage() {
           {/* Contact Info */}
           <div className="flex flex-col gap-8">
             <div>
-              <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-red-800 pb-2 inline-block">
+              <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-brand pb-2 inline-block">
                 Booking
               </h3>
               <div className="flex flex-col gap-3">
-                <a href="mailto:booking@themanisdead.com" className="flex items-center gap-3 text-white/60 hover:text-red-700 transition-colors">
+                <a href="mailto:booking@themanisdead.com" className="flex items-center gap-3 text-white/60 hover:text-brand transition-colors">
                   <Mail size={16} />
                   <span className="text-sm">booking@themanisdead.com</span>
                 </a>
-                <a href="tel:+15551234567" className="flex items-center gap-3 text-white/60 hover:text-red-700 transition-colors">
+                <a href="tel:+15551234567" className="flex items-center gap-3 text-white/60 hover:text-brand transition-colors">
                   <Phone size={16} />
                   <span className="text-sm">(555) 123-4567</span>
                 </a>
@@ -365,7 +365,7 @@ function ContactPage() {
             </div>
 
             <div>
-              <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-red-800 pb-2 inline-block">
+              <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-brand pb-2 inline-block">
                 Location
               </h3>
               <div className="flex items-center gap-3 text-white/60">
@@ -375,17 +375,17 @@ function ContactPage() {
             </div>
 
             <div>
-              <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-red-800 pb-2 inline-block">
+              <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-brand pb-2 inline-block">
                 Follow Us
               </h3>
               <div className="flex gap-4">
-                <a href="#" className="text-white/60 hover:text-red-700 transition-colors" aria-label="Instagram">
+                <a href="#" className="text-white/60 hover:text-brand transition-colors" aria-label="Instagram">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="text-white/60 hover:text-red-700 transition-colors" aria-label="Facebook">
+                <a href="#" className="text-white/60 hover:text-brand transition-colors" aria-label="Facebook">
                   <Facebook size={20} />
                 </a>
-                <a target='_blank' href="https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO" className="text-white/60 hover:text-red-700 transition-colors" aria-label="Spotify">
+                <a target='_blank' href="https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO" className="text-white/60 hover:text-brand transition-colors" aria-label="Spotify">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34a.75.75 0 0 1-1.03.248c-2.82-1.723-6.37-2.112-10.552-1.157a.749.749 0 1 1-.334-1.462c4.572-1.045 8.492-.595 11.668 1.338a.75.75 0 0 1 .248 1.034zm1.473-3.272a.936.936 0 0 1-1.287.308c-3.225-1.982-8.142-2.557-11.958-1.399a.937.937 0 0 1-1.167-.623.937.937 0 0 1 .624-1.167c4.358-1.322 9.776-.682 13.48 1.595.44.27.578.846.308 1.286zm.127-3.403C15.688 8.382 9.116 8.172 5.312 9.26a1.122 1.122 0 1 1-.652-2.148c4.373-1.247 11.64-1.006 16.229 1.675a1.122 1.122 0 0 1-1.768 1.378z"/></svg>
                 </a>
               </div>
@@ -406,7 +406,7 @@ function Footer() {
           &copy; {new Date().getFullYear()} The Man Is Dead. All Rights Reserved.
         </p>
         <div className="flex gap-4">
-          <a target='_blank' href="https://www.sunnybrown.dev/" className="text-white/30 hover:text-red-700 transition-colors" aria-label="SWDLink">
+          <a target='_blank' href="https://www.sunnybrown.dev/" className="text-white/30 hover:text-brand transition-colors" aria-label="SWDLink">
             Built by Sunshine Web Development
           </a>
         </div>
