@@ -127,7 +127,7 @@ function HomePage() {
         <img
           src={logoLarge}
           alt="The Man Is Dead"
-          className="relative z-10 w-[80vw] max-w-5xl drop-shadow-[0_0_40px_rgba(242,53,53,0.4)]"
+          className="relative z-10 w-[80vw] max-w-5xl drop-shadow-[0_0_40px_rgba(242,53,53,0.4)] lg:mt-[200px]"
         />
       </section>
 
