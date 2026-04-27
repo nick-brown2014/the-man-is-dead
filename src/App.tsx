@@ -168,7 +168,7 @@ function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-white font-bold text-lg uppercase tracking-wider">Lost Lake</h3>
+                <h3 className="text-white font-bold text-lg uppercase tracking-wider">Larimer Lounge</h3>
                 <p className="text-white/50 text-sm mt-2">Come see us on May 9th</p>
               </div>
             </div>
