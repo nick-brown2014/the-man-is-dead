@@ -201,9 +201,6 @@ function HomePage() {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-8">
-              <p className="text-white/70 text-sm uppercase tracking-widest">Photos coming soon</p>
-            </div>
           </div>
         </div>
       </section>
@@ -242,12 +239,9 @@ function GalleryPage() {
   return (
     <div className="min-h-screen pt-24 pb-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl sm:text-6xl font-black text-white uppercase tracking-tighter text-center mb-4">
+        <h1 className="text-4xl sm:text-6xl font-black text-white uppercase tracking-tighter text-center mb-24">
           Gallery
         </h1>
-        <p className="text-white/50 text-center mb-16 uppercase tracking-widest text-sm">
-          Photos coming soon
-        </p>
 
         {/* Masonry-style grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
