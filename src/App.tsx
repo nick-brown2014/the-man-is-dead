@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
-import { Menu, X, Instagram, Facebook, Mail, MapPin, Phone } from 'lucide-react'
+import { Menu, X, Instagram, Facebook } from 'lucide-react'
 import './App.css'
 import heroImg from './assets/hero-tmid.jpg'
 import logoSmall from './assets/tmid-small-red.png'
@@ -272,15 +272,6 @@ function GalleryPage() {
 
 /* ─── Contact Page ─── */
 function ContactPage() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Form handling placeholder
-    alert('Message sent! (placeholder)')
-    setFormData({ name: '', email: '', message: '' })
-  }
-
   return (
     <div className="min-h-screen pt-24 pb-20 px-4">
       <div className="max-w-4xl mx-auto">
@@ -291,106 +282,18 @@ function ContactPage() {
           Get in touch
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-              <div>
-                <label htmlFor="name" className="block text-white/70 text-xs uppercase tracking-widest mb-2">
-                  Name
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-brand transition-colors"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-white/70 text-xs uppercase tracking-widest mb-2">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-brand transition-colors"
-                  placeholder="your@email.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-white/70 text-xs uppercase tracking-widest mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  required
-                  rows={6}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-brand transition-colors resize-none"
-                  placeholder="Your message..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="px-8 py-3 font-bold uppercase tracking-widest text-sm text-white border-2 border-brand hover:bg-brand transition-colors self-start"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-
-          {/* Contact Info */}
-          <div className="flex flex-col gap-8">
-            <div>
-              <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-brand pb-2 inline-block">
-                Booking
-              </h3>
-              <div className="flex flex-col gap-3">
-                <a href="mailto:booking@themanisdead.com" className="flex items-center gap-3 text-white/60 hover:text-brand transition-colors">
-                  <Mail size={16} />
-                  <span className="text-sm">booking@themanisdead.com</span>
-                </a>
-                <a href="tel:+15551234567" className="flex items-center gap-3 text-white/60 hover:text-brand transition-colors">
-                  <Phone size={16} />
-                  <span className="text-sm">(555) 123-4567</span>
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-brand pb-2 inline-block">
-                Location
-              </h3>
-              <div className="flex items-center gap-3 text-white/60">
-                <MapPin size={16} />
-                <span className="text-sm">Denver, CO</span>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-4 border-b border-brand pb-2 inline-block">
-                Follow Us
-              </h3>
-              <div className="flex gap-4">
-                <a href="#" className="text-white/60 hover:text-brand transition-colors" aria-label="Instagram">
-                  <Instagram size={20} />
-                </a>
-                <a href="#" className="text-white/60 hover:text-brand transition-colors" aria-label="Facebook">
-                  <Facebook size={20} />
-                </a>
-                <a target='_blank' href="https://open.spotify.com/artist/2z8A3ymwpuW0HnisKiZ9FO" className="text-white/60 hover:text-brand transition-colors" aria-label="Spotify">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34a.75.75 0 0 1-1.03.248c-2.82-1.723-6.37-2.112-10.552-1.157a.749.749 0 1 1-.334-1.462c4.572-1.045 8.492-.595 11.668 1.338a.75.75 0 0 1 .248 1.034zm1.473-3.272a.936.936 0 0 1-1.287.308c-3.225-1.982-8.142-2.557-11.958-1.399a.937.937 0 0 1-1.167-.623.937.937 0 0 1 .624-1.167c4.358-1.322 9.776-.682 13.48 1.595.44.27.578.846.308 1.286zm.127-3.403C15.688 8.382 9.116 8.172 5.312 9.26a1.122 1.122 0 1 1-.652-2.148c4.373-1.247 11.64-1.006 16.229 1.675a1.122 1.122 0 0 1-1.768 1.378z"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div className="text-center py-12">
+          <p className="text-white/80 text-lg mb-6 max-w-2xl mx-auto leading-relaxed">
+            For booking inquiries or to get in touch, please reach out to us on Instagram.
+          </p>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/p/DKIxSVuJH7j/"
+            className="inline-flex items-center gap-3 px-8 py-4 font-bold uppercase tracking-widest text-sm text-white border-2 border-brand hover:bg-brand transition-colors"
+          >
+            <Instagram size={20} />
+            DM us on Instagram
+          </a>
         </div>
       </div>
     </div>
